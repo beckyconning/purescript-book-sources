@@ -382,10 +382,10 @@ X>
 X> 1. (Easy) Use the `factors` function to define a function `isPrime` which tests if its integer argument is prime or not.
 X> 1. (Medium) Write function which uses do notation to find the _cartesian product_ of two arrays, i.e. the set of all tuples of elements `a`, `b`, where `a` is an element of the first array, and `b` is an element of the second.
 X> 1. (Medium) A _Pythagorean triple_ is an array of numbers `[a, b, c]` such that `a² + b² = c²`. Use the `guard` function in an array comprehension to write a function `triples` which takes a number `n` and calculates all Pythagorean triples whose components are less than `n`. Your function should have type `Number -> [[Number]]`.
-X> 1. (Difficult) Look up the `any` function from `Data.Foldable`. Rewrite the `factors` function to use the `any` function instead of an array comprehension. _Note_: the type of `any` as reported by `psci` is more general than you need. For the purposes of this exercise, you can assume the type of `any` is `forall a. (a -> Boolean) -> [a] -> Boolean`.
+X> 1. (Difficult) Rewrite the `factors` function from scratch using the `any` function from `Data.Foldable`. Do not use `concat`, `concatMap`, `do` or `>>=`. _Note_: the type of `any` as reported by `psci` is more general than you need. For the purposes of this exercise, you can assume the type of `any` is `forall a. (a -> Boolean) -> [a] -> Boolean`.
 X> 1. (Diabolical) Use the `factors` function to define a function `factorizations` which produces all _factorizations_ of a number `n`, i.e. arrays of integers whose product is `n`. _Hint_: consider the factorizations of 1 separately. Be careful to avoid infinite recursion.
 
-## Folds
+## FoldsLook up the `any` function 
 
 Left and right folds over arrays provide another class of interesting functions which can be implemented using recursion.
 
