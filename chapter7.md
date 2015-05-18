@@ -544,7 +544,7 @@ In general, `traverse` walks over the elements of a data structure, performing c
 The type signature for `Traversable`'s other function `sequence` may look familiar:
 
 ```haskell
-sequence :: forall a f. (Applicative m) => t (f a) -> f (t a)
+sequence :: forall a f. (Applicative f) => t (f a) -> f (t a)
 ```
 
 In fact, the `combineArray` function that we wrote earlier is just a special case of the `sequence` function from the `Traversable` type class. Setting `t` to be the array type constructor `[]`, we recover the type of the `combineArray` function:
