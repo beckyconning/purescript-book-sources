@@ -608,8 +608,8 @@ X>
 X>     ```haskell
 X>     timeout :: forall a eff. 
 X>       Milliseconds -> 
-X>       ContRef eff a -> 
-X>       ContRef eff (Maybe a)
+X>       ContRef (timeout :: Timeout | eff) a -> 
+X>       ContRef (timeout :: Timeout | eff) (Maybe a)
 X>     ```
 X> 
 X>     which returns `Nothing` if the specified computation does not provide a result within the given number of milliseconds.
