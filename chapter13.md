@@ -219,7 +219,7 @@ newtype Byte = Byte Number
 instance arbitraryByte :: Arbitary Byte where
   arbitrary = uniformToByte <$> arbitrary
     where
-    uniformToByte n = Math.floor (n * 256)
+    uniformToByte n = Byte $ Math.floor (n * 256)
 ```
 
 Here, we define a type `Byte` of integral values between 0 and 255. The `Arbitrary` instance uses the `<$>` operator to lift the `uniformToByte` function over the `arbitrary` action. The type of the inner `arbitrary` action is inferred as `Gen Number`, which means that it is generates a uniformly distributed number between 0 and 1.
