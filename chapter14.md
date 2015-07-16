@@ -685,7 +685,7 @@ With that, we can try out our new functionality in `psci`, by generating a uniqu
     top <- newName
     elem $ a [ name := top ] $ 
       text "Top"
-    elem $ a [ href := AnchorHref top1 ] $ 
+    elem $ a [ href := AnchorHref top ] $ 
       text "Back to top"
   
 "<p><a name=\"name0\">Top</a><a href=\"#name0\">Back to top</a></p>"
